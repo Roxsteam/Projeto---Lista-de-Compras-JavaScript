@@ -69,7 +69,6 @@ font: bold 26.76px "Sora", sans-serif;}
     color: var(--color-brand);
     font: var(--font-link);
 
-
 }
 
 h1 {
@@ -124,6 +123,12 @@ cursor: pointer;
 
 }
 }
+
+
+
+
+
+
 
 ul {
 height: 14.5rem;
@@ -191,6 +196,7 @@ background-repeat: no-repeat;
 & button {
     border: none;
     background-color: inherit;
+    cursor: pointer;
    
 
 }
@@ -224,5 +230,62 @@ justify-content: space-between;
     }
 }
 
+.button-alert {
+    border: none;
+    background-color: inherit;
+    color: var(--always-white);
+    margin-right: 1rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
 
     
+
+
+
+@media (width <= 24.375rem) {  
+
+    body {
+        width: 100%;
+        height: 100%; 
+ }
+
+ .voltar {
+    margin-left: 2rem;
+    
+ }
+
+h1 {
+    margin-left: 2rem;}
+
+.add {
+    margin-left: 2rem;
+    width: auto;
+    flex-direction: column;
+    
+    & input {
+        width: 20.125rem;
+        height: 2.75rem;
+        
+        
+    }
+
+    .add-item {
+        width: 100%;
+        height: 20.75rem;
+    }
+}
+
+ul {
+    margin-left: 2rem;
+    width: auto;
+}
+
+
+
+
+
+
+}

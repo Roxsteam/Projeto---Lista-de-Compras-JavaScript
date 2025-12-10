@@ -37,3 +37,46 @@ if (input.value === " " ) {
    input.value = ""
 
 })  
+
+
+// remover o item ao clicar no botão de lixeira
+// chama a lista ul 
+const ul = document.querySelector("ul")
+
+// observa o evento de clique em toda a ul
+ul.addEventListener("click", (event)=>{
+// se o alvo do clique for um botão, remova a li corresponde (mais próximo do alvo do clique)
+if (event.target.closest("button")) {
+    const li = event.target.closest("li")
+    li.remove()
+
+    // criar o alerta de remoção do item ao clicar no botão de lixeira
+    const body = document.querySelector("body")
+    const div = document.createElement("div")
+
+    //adicionei a estilização da classe alert
+    div.classList.add("alert")
+
+
+    // criei o conteúdo do alerta (HTML da div)
+    div.innerHTML = `<div><img src="assets/warning-circle-filled.svg" alt=""><p>O item foi removido da lista</p> </div>
+    <button class = "button-alert"><img src="assets/delete-small.svg" alt=""> </button>`
+
+    //adiciona a div criada ao body 
+    body.appendChild(div)
+
+    // remove a div após 2 segundos
+    const timeOut = setTimeout (()=> {
+    
+    div.remove()}, 2000)
+
+    // remover a div ao clicar no botão de excluir do alerta
+    div.addEventListener("click", (event)=> {
+        if (event.target.closest("button")) {
+            div.remove()
+            clearTimeout (timeOut)
+        }
+  
+    })
+
+} } )
