@@ -108,7 +108,7 @@ border: none;
 outline: 2px solid var(--color-brand);
 }
 
-& button {
+.add-item {
 height: 100%;
 width: 10rem;
 border-radius: 12px;
